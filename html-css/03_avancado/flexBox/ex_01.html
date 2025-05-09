@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+            /* Define qual será o meu fluxo */
+            /* flex-direction: row; */
+            /* Quebra o meu fluxo conforme eu configurar */
+            /* flex-wrap: nowrap; */ 
+            /* É a junção do direction e wrap */
+            /* flex-flow: row nowrap; */
+            /* Tira os espaços em branco */
+            /* flex: auto; */
+            /* Define os espaceamento na linha principal */
+            /* justify-content: ; */
+            /* Define posição na linha transverssal */
+            /* align-items: ; */
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

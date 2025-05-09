@@ -1,0 +1,30 @@
+.container1 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(224, 179, 141);
+    text-align: center;
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: rgba(214, 131, 64, 0.425);
+    border-radius: 10px;
+    padding: 5px;
+    width: 10dvw;
+    margin: auto;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 363);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

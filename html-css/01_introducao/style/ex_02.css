@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: dimgray;
+    margin: 0px;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+}
+
+nav {
+    background-color: rgba(122, 241, 201, 0.541);
+    padding: 3px;
+    box-shadow: 1px 1px 1px black;
+
+}
+nav > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+nav > a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+main {
+    height: 90vh;
+    background-color: white;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(172, 152, 152);
+    text-align: center;
+    padding: 4px;
+    margin: 0px;
+}
+footer >p {
+    margin: 0px;
+}
+
+#minhaH1 { 
+    /* display: inline; */
+    background-color: lightblue;
+    width: max-content;
+    height: max-content;
+
+    /* Border */
+    border-width: 10px;
+    border-style: groove;
+    border-color: aquamarine;
+    /* 
+    border: expessura tipo cor;
+    */
+
+    /* Padding - borda de dentro */
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    /* 
+    padding: sentindo-horario;
+    */
+
+    /* Margin - borda de fora */
+    margin: auto; /* Mais comum, centraliza */
+    /* 
+    margin: sentindo-horario;
+    */
+
+    /* Outline - entre a borda interna e a exter */
+    /* outline-width: 5px;
+    outline: dashed;
+    outline-color: rgb(241, 151, 40); */
+
+    /* 
+    outline: expessura tipo cor;
+    */
+}
+
+#container {
+    background-color: purple;
+    position: relative;
+    height: 500px;
+    padding: 10px;
+}
+
+#conteudo {
+    background-color: yellow;
+    background-size: 100% 100%;
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

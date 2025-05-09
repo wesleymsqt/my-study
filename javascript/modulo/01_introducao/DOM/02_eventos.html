@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <!-- Link de eventos: 
+    https://developer.mozilla.org/en-US/docs/Web/Events 
+    -->
+    <div id="clicar" onclick="clicar()">
+        Clique!
+    </div><br>
+    <div id="entrar" onmouseenter="entrar()" onmouseout="sair()">
+        Entre!
+    </div><br>
+
+    <!-- Outro método: -->
+    <div id="area">
+        Interaja...
+    </div> <br>
+
+    <!-- Somando valores: -->
+    <div id="container1">
+        <h2>Somando Valores</h2>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+
+        <input type="button" value="Somar" id="res" onclick="somar()">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

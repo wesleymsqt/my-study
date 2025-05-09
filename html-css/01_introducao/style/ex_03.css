@@ -1,0 +1,67 @@
+/* body {
+    height: 98vh; Sem isso o corpo da minha pagina ficaria pequeno
+    border: 1px dashed black;
+    background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+/* div.bloco {
+    background-image: url('../img/wallpaper003.jpg');
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+div#q1 {
+    background-position: left top;
+}
+
+div#q2 {
+    background-position: left center;
+}
+
+div#q3 {
+    background-position: right bottom;
+}
+
+div#q4 {
+    background-position: center center;
+} */
+
+body {
+    height: 98vh;
+    /* background-color: black;
+    background-image: url('../img/wallpaper002.jpg');
+    background-position: center center;
+    background-repeat: no-repeat; */
+
+    /* 
+        O size pode ser: 
+            - auto: tamanho da imagem
+            - contain: 100% da imagem sem cortar
+            - cover: preenche a tela inteira fazendo corte
+    */
+    /* background-size: cover; */
+    /* Deixa o fundo fixo */
+    /* background-attachment: fixed;  */
+
+    /* 
+        Shorthand do background:
+            color > image > position > repeat > [size] > attachment
+        Obs: size não funciona até entao
+    */
+    background: black url('../img/wallpaper002.jpg') center center no-repeat fixed; 
+    background-size: cover;
+}
+
+main {
+    background-color: white;
+    max-width: 400px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid darkblue;
+    border-radius: 15px;
+}

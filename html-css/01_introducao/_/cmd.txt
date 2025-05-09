@@ -1,0 +1,3 @@
+ctrl + ; || ctrl + / (comentario)
+shift + alt + a (comentario em n linhas)
+alt + curso (edição multiplas)

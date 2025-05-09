@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button onclick="mostrarMensagem()">Enviar</button>
+    <script>
+        /* ------------- TRATAMENTO DE DADOS ------------- */
+/* Tanto faz colocar ";" */
+        // window.alert('Hello, world');
+        // window.confirm('Confirm');
+
+        // var nome = window.prompt('Name:');
+        // window.alert('Hello ' + nome); // "+" concatenação
+
+/* Recendo string */
+        // var n1 = Number.parseInt(window.prompt('Number 1:'));
+        // var n2 = Number.parseInt(window.prompt('Number 2:'));
+        /*  Number converte automaticamente 
+            String converte automaticamente */
+        // var n3 = Number(window.prompt('Number 3:'));
+        // var s = n1 + n2;
+        // window.alert('Sum: ' + s);
+
+/* Converter */
+        // Number.parseInt();
+        // Number.parseFloat();
+        // s.toString();
+        // window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`); //Utiliza crase `
+
+/* Formatando a letra */
+        // var nome = window.prompt('Qual é o seu nome?');
+        // document.write(`Seu nome tem ${nome.length} letras. </br>`);
+        // document.write(`Seu nome maiúsculo ${nome.toUpperCase()} letras.`); //Tem colocar () pq é uma chamada pro metodo
+
+/* Formatando o numero */
+        // var n1 = 1.5;
+        // var n2 = 12345.67;
+        // window.alert(n1.toFixed(2));
+        // window.alert(n2.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+
+        /* ------------- OPERADORES ------------- */
+        // Aritméticos  + - * / % **
+        // Relacionais  > < >= <= == != === 
+        // Lógicos      ! && ||
+        /* Ternário    _?_:_
+            exemplo: true?true:false */
+
+        /* Tipos de var: */
+        // var - pode variar
+        // let - pode variar
+        // const - não muda
+
+        /* Tipos de dados: */
+        // Temos tipagem dinamica, o programa reconhece automaticamente
+        // string = "nome"
+        // number - todos os numeros
+        // booleam = true ou false - valores logicos 
+        // null - ausencia intencional de dado
+        // undefined - var declarada mas nao foi inicializada
+
+        // typeof(var) - mostra o tipo de dado
+
+        /* FUNÇÕES */
+        function nome(parametro1, parametro2){
+            return parametro1 * parametro2;
+        }
+        function mostrarMensagem(){
+            alert("Botao clicado");
+        }
+
+/* Objeto e metodos */
+        let carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2000,
+            descricao: function(){ //metodo
+                return `Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`
+            }
+        }
+
+/* Arrays */
+        let listasCompras = ["leite", "pao", "ovo"];
+        let numeros = [1, 2, 3];
+        let aleatorio = [1, "leite", 2, "pao"];
+        // Os arrays nao tem numero fixo
+        for(let i = 0; i < listasCompras.length; i++){
+            console.log(listasCompras[i]);
+        }
+
+        listasCompras.forEach(function(item) { // outra maneira de iterar, ele diretamente sobre o elemento do array
+            console.log(item);
+        });
+
+/* Metodos de array */
+        listasCompras.push("cha"); //Adicionar item ao final
+        console.log(listasCompras);
+        listasCompras.pop(); //Remover item no final
+        console.log(listasCompras);
+
+/* Arrow Functions */
+        function dobro(n){ // Função tradicional
+            return n * 2;
+        }
+        // Arrow functio
+        const dobro2 = n => n *2; 
+        // Chamada de funções
+        console.log(dobro(4));
+        console.log(dobro2(4));
+
+        let num = [1, 2, 3];
+        let dobroNum = num.map(n => n*2);
+        console.log(dobroNum);
+
+        /* Template Literals */
+        let nome_A = "Ana";
+        let mensagem = `Bem-vinda, ${nome_A}!`;
+        console.log(mensagem);
+
+        /* Promise */
+        let buscaDados = new Promise((resolve, reject) =>{
+            let sucesso = false // Simulando uma condição de sucesso
+            setTimeout(() => { // Função com timeout de 2s
+                if(sucesso){
+                    resolve("Dados carregados com sucesso!");
+                } else {
+                    reject("Erro ao carregar dados.");
+                }
+            }, 2000);
+        });
+
+        buscaDados.then(mensagem => {
+            console.log(mensagem);
+        }).catch(erro =>{
+            console.log(erro);
+        });
+
+        /* ASSYNC/AWAIT */
+        async function carregarDados() {
+            try {
+                let resposta = await buscaDados;
+                console.log(resposta);
+            } catch (erro) {
+                console.log(erro);
+            }
+        }
+        carregarDados();
+
+        async function buscarUsuario() {
+            try {
+                let resposta = await fetch('https://jsonplaceholder.typicode.com/users'); // Busca dados na minha API externa
+                let usuario = await resposta.json(); // Formato de trazer dados
+                console.log(usuario);
+            } catch (erro) {
+                console.log('Erro', erro);
+            }
+        }
+        buscarUsuario();
+    </script>
+</body>
+</html>

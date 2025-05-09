@@ -1,0 +1,70 @@
+@charset "UTF-8"; /* Evita incompatibilidade com caracteres especiais */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* { /* Configuração globais */
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 100%; */
+}
+
+body {
+    /* background-image: linear-gradient(to right, #3198E2 1%, #6D59C0 20%, #B93590, #E33F5F, #FDD579); */
+    /* background-image: radial-gradient(circle, #3198E2, #6D59C0, #B93590, #E33F5F, #FDD579); */
+    background-image: linear-gradient(to right, #F1D8C9, #F2C3A7);
+    background-attachment: fixed;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #866c5d86; /* lado baixo espalhar transparencia */
+    width: 600px;
+    padding: 10px;
+    margin: auto; /* Vai centralizar independente da tela */
+}
+
+h1, h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    color: #F39209;
+    text-align: center;
+    text-shadow: 1px 1px 2px #925705a1;
+}
+
+p {
+    text-align: justify;
+    font-size: 1em; /* Mais indicada */
+    font-weight: 100; /* Peso da fonte: lighrer, nornal, bold, bolder ou 100 - 900*/
+    font-style: italic;
+    /* text-decoration: underline; */
+    /*  
+        Outro método, chamado de 'shorthand font', mas tem que seguir a ordem!
+        font-style -> font-weight -> font-size -> font-family
+    font: italic bolder 3em 'Arial', sans-serif; 
+    */
+    text-indent: 20px; /* Indentação */
+}
+p#fontGoogle { /* elemento#nomeId */
+    font-family: 'Tangerine', sans-serif;
+    text-align: justify;
+    font-size: 2em; /* Mais indicada */
+    font-weight: 100; /* Peso da fonte: lighrer, nornal, bold, bolder ou 100 - 900*/
+    font-style: italic;
+}
+
+div {
+    display: inline-block; /* Blocos na mesma linha */
+    background-color: lightgray;
+    border: 1px solid black; /* shothand */
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+div:hover { /* chama o : de 'pseudo-classe' */
+    background-color: #F2C3A7;
+}
+div > p { /* p é filho da div */
+    display: none;
+}
+div:hover > p {
+    display: block;
+}

@@ -1,0 +1,10 @@
+- Para verificar se esta instalado:
+node -v
+npm -v
+
+- Para criar um projeto completo:
+npx create-react-app meu-projeto
+
+- Para ligar o servidor:
+cd meu-projeto
+npm start

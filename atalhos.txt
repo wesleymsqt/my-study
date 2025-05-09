@@ -1,0 +1,11 @@
+shift + alt + A
+shift + alt + seta pra baixo copia
+alt nas linhas e depois ctrl + deleciona todos elemtentos na pagina
+
+form [type="submit"]{}
+
+REACT
+npm creat vite@latest
+
+REACT-NATIVE
+npx @react-native-community/cli@latest init
