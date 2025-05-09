@@ -1,4 +1,10 @@
-export function Heading() {
+import styles from './Heading.module.css';
+
+type HeadingProps = {
+    children: React.ReactNode;
+};  
+
+export function Heading({children}: HeadingProps) {
     // Utilizando className
-    return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+    return <h1 className={styles.heading}>{children}</h1>;
 }
