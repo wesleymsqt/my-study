@@ -6,6 +6,7 @@ form [type="submit"]{}
 
 REACT
 npm creat vite@latest
+npm run dev (antes entrar dentro da pasta)
 
 REACT-NATIVE
 npx @react-native-community/cli@latest init
