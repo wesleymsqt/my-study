@@ -1,9 +1,10 @@
+// Importando os componentes
+import { Heading } from "./components/Heading";
+import { Container } from "./components/Container";
+import { Logo } from "./components/Logo";
+
 import "./styles/global.css";
 import "./styles/theme.css";
-
-// Importando os componentes
-import { Container } from "./components/Container";
-import { Heading } from "./components/Heading";
 
 // Aqui estamos importando minha function direto
 export function App() {
@@ -12,9 +13,9 @@ export function App() {
   return (
     <>
       <Container>
-        <section>
-          <Heading>LOGO</Heading>
-        </section>
+        <Heading>
+          <Logo />
+        </Heading>
       </Container>
 
       {/* 
