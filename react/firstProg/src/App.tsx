@@ -2,9 +2,11 @@
 import { Heading } from "./components/Heading";
 import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
+import { Menu } from "./components/Menu";
 
 import "./styles/global.css";
 import "./styles/theme.css";
+import { CountDown } from "./components/CountDown";
 
 // Aqui estamos importando minha function direto
 export function App() {
@@ -28,7 +30,12 @@ export function App() {
       */}
 
       <Container>
-        <Heading>MENU</Heading>
+        <Menu />
+      </Container>
+      <Container>
+        <CountDown>
+          
+        </CountDown>
       </Container>
     </>
   );
