@@ -33,9 +33,27 @@ export function App() {
         <Menu />
       </Container>
       <Container>
-        <CountDown>
-          
-        </CountDown>
+        <CountDown />
+      </Container>
+      <Container> 
+        <form className="form">
+          <div className="formRow">
+            <label htmlFor="meuInput">task</label>
+            <input id="meuInput" type="text" />
+          </div>
+
+          <div className="formRow">
+            <p>Selecione o tempo</p>
+          </div>
+
+          <div className="formRow">
+            <p>Minutos</p>
+          </div>
+
+          <div className="formRow">
+            <button>Enviar</button>
+          </div>
+        </form>
       </Container>
     </>
   );
