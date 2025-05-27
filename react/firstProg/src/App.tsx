@@ -3,10 +3,11 @@ import { Heading } from "./components/Heading";
 import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
+import { CountDown } from "./components/CountDown";
+import { DefaultInput } from "./components/DefaultInpunt";
 
 import "./styles/global.css";
 import "./styles/theme.css";
-import { CountDown } from "./components/CountDown";
 
 // Aqui estamos importando minha function direto
 export function App() {
@@ -38,8 +39,7 @@ export function App() {
       <Container> 
         <form className="form">
           <div className="formRow">
-            <label htmlFor="meuInput">task</label>
-            <input id="meuInput" type="text" />
+            <DefaultInput labelText="Texto" id="meuInput" type="text" />
           </div>
 
           <div className="formRow">
