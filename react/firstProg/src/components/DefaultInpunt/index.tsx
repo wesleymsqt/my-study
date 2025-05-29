@@ -1,3 +1,4 @@
+import styles from './styles.module.css';
 
 type DefaultInpuntProps = { 
   id: string;
@@ -18,7 +19,7 @@ export function DefaultInput({
 
       {/* ou {condição && 'Verdadeiro'} */}
       {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input id={id} type={type} {...rest}/>
+      <input className={styles.input} id={id} type={type} {...rest}/>
     </>
   );
 }

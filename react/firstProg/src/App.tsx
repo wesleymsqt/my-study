@@ -36,10 +36,11 @@ export function App() {
       <Container>
         <CountDown />
       </Container>
+
       <Container> 
         <form className="form">
           <div className="formRow">
-            <DefaultInput labelText="Texto" id="meuInput" type="text" />
+            <DefaultInput labelText="Texto" id="meuInput" type="text" placeholder="Digite Algo" />
           </div>
 
           <div className="formRow">
