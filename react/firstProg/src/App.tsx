@@ -4,11 +4,13 @@ import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
-import { DefaultInput } from "./components/DefaultInpunt";
+import { DefaultInput } from "./components/DefaultInput";
+import { DefaultButton } from "./components/DefaultButton";
 
 import "./styles/global.css";
 import "./styles/theme.css";
 import { Cycles } from "./components/Cycles";
+import { PlayCircleIcon } from "lucide-react";
 
 // Aqui estamos importando minha function direto
 export function App() {
@@ -53,7 +55,7 @@ export function App() {
           </div>
 
           <div className="formRow">
-            <button>Enviar</button>
+            <DefaultButton icon={<PlayCircleIcon />} color="red" />
           </div>
         </form>
       </Container>

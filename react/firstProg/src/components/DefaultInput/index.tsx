@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-type DefaultInpuntProps = { 
+type DefaultInputProps = { 
   id: string;
   labelText?: string; // ? -> torna opcional
 } & React.ComponentProps<'input'>;
@@ -11,7 +11,7 @@ export function DefaultInput({
   labelText, 
   type, 
   ...rest 
-}: DefaultInpuntProps) {
+}: DefaultInputProps) {
   return (
     <>
       {/* {condição ? 'Verdadeiro' : 'Falso'} */}
