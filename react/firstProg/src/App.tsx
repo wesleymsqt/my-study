@@ -8,6 +8,7 @@ import { DefaultInput } from "./components/DefaultInpunt";
 
 import "./styles/global.css";
 import "./styles/theme.css";
+import { Cycles } from "./components/Cycles";
 
 // Aqui estamos importando minha function direto
 export function App() {
@@ -44,11 +45,11 @@ export function App() {
           </div>
 
           <div className="formRow">
-            <p>Selecione o tempo</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div className="formRow">
-            <p>Minutos</p>
+            <Cycles />
           </div>
 
           <div className="formRow">
