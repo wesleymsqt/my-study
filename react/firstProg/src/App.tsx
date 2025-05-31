@@ -6,6 +6,7 @@ import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
 import { DefaultInput } from "./components/DefaultInput";
 import { DefaultButton } from "./components/DefaultButton";
+import { Footer } from "./components/Footer";
 
 import "./styles/global.css";
 import "./styles/theme.css";
@@ -58,6 +59,10 @@ export function App() {
             <DefaultButton icon={<PlayCircleIcon />} color="red" />
           </div>
         </form>
+      </Container>
+
+      <Container> 
+        <Footer />
       </Container>
     </>
   );
