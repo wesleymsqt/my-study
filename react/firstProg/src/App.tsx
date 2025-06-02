@@ -1,14 +1,13 @@
 // Importando os componentes
-import { Heading } from "./components/Heading";
-import { Container } from "./components/Container";
-import { Logo } from "./components/Logo";
-import { Menu } from "./components/Menu";
-import { CountDown } from "./components/CountDown";
-import { DefaultInput } from "./components/DefaultInput";
-import { DefaultButton } from "./components/DefaultButton";
-import { Footer } from "./components/Footer";
-import { Cycles } from "./components/Cycles";
-import { PlayCircleIcon } from "lucide-react";
+// import { Heading } from "./components/Heading";
+// import { Container } from "./components/Container";
+// import { Logo } from "./components/Logo";
+// import { Menu } from "./components/Menu";
+// import { CountDown } from "./components/CountDown";
+// import { Footer } from "./components/Footer";
+// import { MainForm } from "./components/MainForm";
+
+import { Home } from "./pages/Home";
 
 import "./styles/global.css";
 import "./styles/theme.css";
@@ -18,13 +17,13 @@ export function App() {
   // useState é um Hook do React que permite adicionar o estado a um componente funcional, e não usar atribuição diretamente
   
   // Retorna apenas um elemento JSX, por isso utilizo dentro de uma div ou <></>
-  return (
-    <>
-      <Container>
-        <Heading>
-          <Logo />
-        </Heading>
-      </Container>
+  return <Home />;
+    // <>
+    //   <Container>
+    //     <Heading>
+    //       <Logo />
+    //     </Heading>
+    //   </Container>
 
       {/* 
       FAZ A MESMA COISA QUE O CÓDIGO ACIMA
@@ -35,7 +34,7 @@ export function App() {
       </div> 
       */}
 
-      <Container>
+      {/* <Container>
         <Menu />
       </Container>
       <Container>
@@ -43,35 +42,14 @@ export function App() {
       </Container>
 
       <Container> 
-        <form className="form">
-          <div className="formRow">
-            <DefaultInput 
-              labelText="Texto" 
-              id="meuInput" 
-              type="text" 
-              placeholder="Digite Algo" 
-            />
-          </div>
-
-          <div className="formRow">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-
-          <div className="formRow">
-            <Cycles />
-          </div>
-
-          <div className="formRow">
-            <DefaultButton icon={<PlayCircleIcon />} color="red" />
-          </div>
-        </form>
+        <MainForm />
       </Container>
 
       <Container> 
         <Footer />
-      </Container>
-    </>
-  );
+      </Container> */}
+  //   </>
+  // );
 }
 
 // export { App }; || export default App;
