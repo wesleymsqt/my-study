@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "0fb1d7cf-8c0d-47c5-ac2e-ceb94c25dfee",
+		"name": "meu-projeto-pgsql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43398703"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/produtos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"produtos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Monitor Ultrawide\",\r\n    \"descricao\": \"Monitor 34 polegadas com alta resolução.\",\r\n    \"preco\": 1899.90,\r\n    \"estoque\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"preco\": 1750.00,\r\n    \"estoque\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/produtos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"produtos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"preco\": 1750.00,\r\n    \"estoque\": 12\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/produtos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"produtos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
