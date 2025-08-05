@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProdutoRequest;
+use App\Http\Requests\UpdateProdutoRequest;
 use App\Models\Produto;
 use Illuminate\Http\Request;
+use App\Http\Resources\ProdutoResource;
 
-/**
- * Controller para gerenciar as operações CRUD do recurso Produto.
- */
 class ProdutoController extends Controller
 {
     /**
@@ -16,26 +16,17 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return Produto::all();
+        return ProdutoResource::collection(Produto::all());
     }
 
     /**
      * Armazena um novo recurso no banco de dados.
      * Rota: POST /produtos
      */
-    public function store(Request $request)
+    public function store(StoreProdutoRequest $request)
     {
-        // Valida os dados de entrada para garantir a integridade.
-        $data = $request->validate([
-            'nome' => 'required|string|max:255',
-            'descricao' => 'nullable|string',
-            'preco' => 'required|numeric|gt:0',
-            'estoque' => 'required|integer|min:0',
-        ]);
+        $produto = Produto::create($request->validated());
 
-        $produto = Produto::create($data);
-
-        // Retorna o novo recurso e o status 201 Created, conforme padrão RESTful.
         return response()->json($produto, 201);
     }
 
@@ -46,25 +37,16 @@ class ProdutoController extends Controller
      */
     public function show(Produto $produto)
     {
-        return $produto;
+        return new ProdutoResource($produto);
     }
 
     /**
      * Atualiza um recurso específico no banco de dados.
      * Rota: PUT/PATCH /produtos/{produto}
      */
-    public function update(Request $request, Produto $produto)
+    public function update(UpdateProdutoRequest $request, Produto $produto)
     {
-        // A regra 'sometimes' permite atualizações parciais (PATCH)
-        // validando apenas os campos presentes na requisição.
-        $data = $request->validate([
-            'nome' => 'sometimes|required|string|max:255',
-            'descricao' => 'sometimes|nullable|string',
-            'preco' => 'sometimes|required|numeric|gt:0',
-            'estoque' => 'sometimes|required|integer|min:0',
-        ]);
-
-        $produto->update($data);
+        $produto->update($request->validated());
 
         return response()->json($produto);
     }
@@ -77,8 +59,6 @@ class ProdutoController extends Controller
     {
         $produto->delete();
 
-        // Retorna uma resposta vazia com status 204 No Content,
-        // indicando sucesso na exclusão.
         return response()->json(null, 204);
     }
 }
