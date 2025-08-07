@@ -1,5 +1,8 @@
 <?php
 
+// Tipagem strict
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProdutoRequest;
@@ -21,7 +24,7 @@ class ProdutoController extends Controller
     {
         $produto = Produto::create($request->validated());
 
-        return response()->json($produto, 201);
+        return new ProdutoResource($produto);
     }
 
     // Exibe um recurso específico
@@ -35,7 +38,7 @@ class ProdutoController extends Controller
     {
         $produto->update($request->validated());
 
-        return response()->json($produto);
+        return new ProdutoResource($produto);
     }
 
     // Remove um recurso específico do banco de dados

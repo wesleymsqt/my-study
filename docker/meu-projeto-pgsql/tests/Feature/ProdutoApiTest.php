@@ -88,7 +88,9 @@ class ProdutoApiTest extends TestCase
      */
     public function test_a_product_can_be_updated(): void
     {
-        $produto = Produto::factory()->create();
+        $produto = Produto::factory()->create([
+            'preco' => 500.00,
+        ]);
 
         $updateData = ['preco' => 999.99];
 
