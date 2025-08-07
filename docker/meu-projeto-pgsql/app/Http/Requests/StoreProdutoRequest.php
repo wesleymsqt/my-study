@@ -14,10 +14,25 @@ class StoreProdutoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|string|max:255',
-            'descricao' => 'nullable|string',
-            'preco' => 'required|numeric|gt:0',
-            'estoque' => 'required|integer|min:0',
+            'nome' => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'descricao' => [
+                'nullable',
+                'string'
+            ],
+            'preco' => [
+                'required',
+                'numeric',
+                'gt:0'
+            ],
+            'estoque' => [
+                'required',
+                'integer',
+                'min:0'
+            ],
         ];
     }
 }

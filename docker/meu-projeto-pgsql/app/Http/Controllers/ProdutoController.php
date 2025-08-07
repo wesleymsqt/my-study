@@ -10,19 +10,13 @@ use App\Http\Resources\ProdutoResource;
 
 class ProdutoController extends Controller
 {
-    /**
-     * Exibe uma listagem dos recursos.
-     * Rota: GET /produtos
-     */
+    // Exibe uma listagem dos recursos
     public function index()
     {
         return ProdutoResource::collection(Produto::all());
     }
 
-    /**
-     * Armazena um novo recurso no banco de dados.
-     * Rota: POST /produtos
-     */
+    // Armazena um novo recurso no banco de dados
     public function store(StoreProdutoRequest $request)
     {
         $produto = Produto::create($request->validated());
@@ -30,20 +24,13 @@ class ProdutoController extends Controller
         return response()->json($produto, 201);
     }
 
-    /**
-     * Exibe um recurso específico.
-     * Utiliza Route Model Binding para injeção automática do modelo.
-     * Rota: GET /produtos/{produto}
-     */
+    // Exibe um recurso específico
     public function show(Produto $produto)
     {
         return new ProdutoResource($produto);
     }
 
-    /**
-     * Atualiza um recurso específico no banco de dados.
-     * Rota: PUT/PATCH /produtos/{produto}
-     */
+    // Atualiza um recurso específico no banco de dados
     public function update(UpdateProdutoRequest $request, Produto $produto)
     {
         $produto->update($request->validated());
@@ -51,10 +38,7 @@ class ProdutoController extends Controller
         return response()->json($produto);
     }
 
-    /**
-     * Remove um recurso específico do banco de dados.
-     * Rota: DELETE /produtos/{produto}
-     */
+    // Remove um recurso específico do banco de dados
     public function destroy(Produto $produto)
     {
         $produto->delete();

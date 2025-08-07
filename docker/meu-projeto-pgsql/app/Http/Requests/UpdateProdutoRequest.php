@@ -14,10 +14,29 @@ class UpdateProdutoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'sometimes|required|string|max:255',
-            'descricao' => 'sometimes|nullable|string',
-            'preco' => 'sometimes|required|numeric|gt:0',
-            'estoque' => 'sometimes|required|integer|min:0',
+            'nome' => [
+                'sometimes',
+                'required',
+                'string',
+                'max:255'
+            ],
+            'descricao' => [
+                'sometimes',
+                'nullable',
+                'string'
+            ],
+            'preco' => [
+                'sometimes',
+                'required',
+                'numeric',
+                'gt:0'
+            ],
+            'estoque' => [
+                'sometimes',
+                'required',
+                'integer',
+                'min:0'
+            ],
         ];
     }
 }
