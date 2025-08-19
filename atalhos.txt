@@ -1,6 +1,6 @@
 shift + alt + A
-shift + alt + seta pra baixo copia
-alt nas linhas e depois ctrl + deleciona todos elemtentos na pagina
+shift + alt + seta para baixo copia
+alt nas linhas e depois ctrl + seleciona todos elemtentos na pagina
 
 form [type="submit"]{}
 
