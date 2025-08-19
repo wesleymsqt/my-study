@@ -12,4 +12,4 @@ Route::get('/contato', [ContactController::class, 'show'])->name('contact.show')
 Route::post('/contato', [ContactController::class, 'send'])->name('contact.send');
 
 // Rota de recurso para o CRUD da Visita
-Route::apiResource('visitas', VisitaController::class);
+Route::resource('visitas', VisitaController::class);

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreVisitaRequest;
-use App\Http\Requests\UpdateVisitaRequest;
+use App\Http\Requests\UpdateVisitaRequest; // Adicione esta linha
 use App\Models\Visita;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; // Mantenha esta linha se outros métodos a usarem
 
 class VisitaController extends Controller
 {

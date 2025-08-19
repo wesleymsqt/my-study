@@ -14,7 +14,7 @@ class VisitaTest extends TestCase
     public function test_can_list_visitas(): void
     {
         Visita::factory()->count(5)->create();
-        $response = $this->getJson('/api/visitas');
+        $response = $this->getJson('/visitas'); // <-- Corrigido aqui
         $response->assertStatus(200);
         $response->assertJsonCount(5);
     }
@@ -22,7 +22,7 @@ class VisitaTest extends TestCase
     public function test_can_create_a_visita(): void
     {
         $visitaData = Visita::factory()->make()->toArray();
-        $response = $this->postJson('/api/visitas', $visitaData);
+        $response = $this->postJson('/visitas', $visitaData); // <-- Corrigido aqui
         $response->assertStatus(201);
         $this->assertDatabaseHas('visitas', [
             'e_mail' => $visitaData['e_mail'],
@@ -33,7 +33,7 @@ class VisitaTest extends TestCase
     public function test_can_show_a_visita(): void
     {
         $visita = Visita::factory()->create();
-        $response = $this->getJson('/api/visitas/' . $visita->id);
+        $response = $this->getJson('/visitas/' . $visita->id); // <-- Corrigido aqui
         $response->assertStatus(200);
         $response->assertJsonFragment([
             'e_mail' => $visita->e_mail,
@@ -44,7 +44,7 @@ class VisitaTest extends TestCase
     {
         $visita = Visita::factory()->create();
         $updateData = ['empresa' => 'Nova Empresa'];
-        $response = $this->putJson('/api/visitas/' . $visita->id, $updateData);
+        $response = $this->putJson('/visitas/' . $visita->id, $updateData); // <-- Corrigido aqui
         $response->assertStatus(200);
         $this->assertDatabaseHas('visitas', [
             'id' => $visita->id,
@@ -55,7 +55,7 @@ class VisitaTest extends TestCase
     public function test_can_delete_a_visita(): void
     {
         $visita = Visita::factory()->create();
-        $response = $this->deleteJson('/api/visitas/' . $visita->id);
+        $response = $this->deleteJson('/visitas/' . $visita->id); // <-- Corrigido aqui
         $response->assertStatus(204);
         $this->assertDatabaseMissing('visitas', [
             'id' => $visita->id,
