@@ -1,0 +1,4 @@
+generate project:
+    npx creat-react-app nomeProjeto
+    cd enomeProjeto
+    npm start
