@@ -1,11 +1,12 @@
 import React, { use, useState } from "react";
 import Header from "./components/Header";
 import Corpo from "./components/Corpo";
+import Numero from "./components/Numero";
 
-import './App.css';
+import "./App.css";
 
 export default function App() {
- const [num, setNum] = useState(0);
+  const [num, setNum] = useState(0);
 
   return (
     <>
@@ -14,8 +15,8 @@ export default function App() {
         <Corpo />
 
         <p className="texto">Texto com css </p>
-        <p> Valor do states: {num} </p>
-        <button onClick={() => setNum(num + 1)}>Incrementar</button>
+        <p>Valor do num em App: {num}</p>
+        <Numero num={num} setNum={setNum} />
       </div>
     </>
   );
