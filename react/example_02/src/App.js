@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Formulario from "./components/Formulario";
+import Notas from "./components/Notas";
 
 export default function App() {
   const [num, setNum] = useState(0);
@@ -8,8 +8,8 @@ export default function App() {
   return (
     <>
       <div className="container">
-        <Formulario />
-
+        <Notas />
+        
       </div>
     </>
   );
