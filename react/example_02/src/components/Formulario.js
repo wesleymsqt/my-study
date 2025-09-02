@@ -1,12 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function Formulario() {
-  const [nome, setNome] = React.useState("");
+  const [nome, setNome] = useState("");
   const handleChange = (e) => {
     setNome(e.target.value);
   };
 
-  const [carro, setCarro] = React.useState("");
+  const [carro, setCarro] = useState("");
+
+  const [form, setForm] = useState({"curso": "", "ano": ""});
+  const handleFormChange = (e) => {
+    if (e.target.getAttribute("curso") === "fcurso") {
+      setForm({"curso": e.target.value, "ano": form.ano});
+    } else if (e.target.getAttribute("ano") === "fano") {
+      setForm({"curso": form.curso, "ano": e.target.value});
+    } 
+  }
 
   return (  
     <>
@@ -24,7 +33,14 @@ export default function Formulario() {
       </select>
       <p>Carro selecionado é: {carro}</p>
 
-      
+      <label>Curso: </label>
+      <input type="text" name="fcurso" value={form.curso} onChange={(e) => handleFormChange(e)} />
+      <label>Ano: </label>
+      <input type="text" name="fano" value={form.ano} onChange={(e)=>handleFormChange(e)} />
+
+      <p>Curso: {form.curso}</p>
+      <p>Ano: {form.ano}</p>
+
     </>
   );
 }
