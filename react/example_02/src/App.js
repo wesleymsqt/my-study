@@ -5,6 +5,7 @@ import Numero from "./components/Numero";
 import Cumprimento from "./components/Cumprimento";
 
 import "./App.css";
+import FuncaoMap from "./components/FuncaoMap";
 
 export default function App() {
   const [num, setNum] = useState(0);
@@ -20,6 +21,7 @@ export default function App() {
         <Numero num={num} setNum={setNum} />
         
         <Cumprimento />
+        <FuncaoMap />
       </div>
     </>
   );
