@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Corpo from "./components/Corpo";
-import Numero from "./components/Numero";
-import Cumprimento from "./components/Cumprimento";
-
 import "./App.css";
-import FuncaoMap from "./components/FuncaoMap";
+import Formulario from "./components/Formulario";
 
 export default function App() {
   const [num, setNum] = useState(0);
@@ -13,15 +8,8 @@ export default function App() {
   return (
     <>
       <div className="container">
-        <Header />
-        <Corpo />
+        <Formulario />
 
-        <p className="texto">Texto com css </p>
-        <p>Valor do num em App: {num}</p>
-        <Numero num={num} setNum={setNum} />
-        
-        <Cumprimento />
-        <FuncaoMap />
       </div>
     </>
   );
