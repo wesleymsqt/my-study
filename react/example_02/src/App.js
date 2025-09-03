@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
-import Notas from "./components/Notas";
+import Tabela from "./components/Tabela";
 
 export default function App() {
-  const [num, setNum] = useState(0);
+  // const [num, setNum] = useState(0);
 
   return (
     <>
       <div className="container">
-        <Notas />
+        <Tabela />
         
       </div>
     </>
