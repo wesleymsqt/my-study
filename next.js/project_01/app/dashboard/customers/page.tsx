@@ -1,7 +1,3 @@
-export default () => {
-  return(
-    <>
-        <p>Clientes Página</p>
-    </>
-  );
+export default function Page() {
+  return <p>Customers Page</p>;
 }
